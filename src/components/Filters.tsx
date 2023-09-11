@@ -10,9 +10,6 @@ interface Props {
 export const Filters: React.FC<Props> = (
     {filterSelected, onFilterChange}
 ) => {
-    const handleClick = (filter: FilterValue) {
-
-    }
     return (
         <ul className="filters">
             {
@@ -35,34 +32,6 @@ export const Filters: React.FC<Props> = (
                     )
                 })
             }
-            <li>
-                <a 
-                className={`${filterSelected === 'all' ? 'selected' : ''}`}
-                onClick={() => {
-                    onFilterChange('all')
-                }}
-                >
-                    Todos
-                </a>
-            </li>
-            <li>
-                <a 
-                className={`${filterSelected === 'active' ? 'selected' : ''}`}
-                onClick={() => {
-                    onFilterChange('active')
-                }}>
-                    Actives
-                </a>
-            </li>
-            <li>
-                <a 
-                className={`${filterSelected === 'completed' ? 'selected' : ''}`}
-                onClick={() => {
-                    onFilterChange('completed')
-                }}>
-                    Actives
-                </a>
-            </li>
         </ul>
     )
 }

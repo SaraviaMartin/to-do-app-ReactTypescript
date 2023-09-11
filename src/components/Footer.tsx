@@ -2,7 +2,7 @@ import { FilterValue } from "../types"
 import { Filters } from "./Filters"
 
 interface Props {
-    activeCount: number
+    activeCount: number,
     completedCount: number,
     filterSelected: FilterValue
     onClearCompleted: () => void
